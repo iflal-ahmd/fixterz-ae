@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        @apply bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100;
+        @apply min-h-screen;
+    }
+    ::selection {
+        @apply text-white bg-indigo-500;
+    }
+    .btn{
+        @apply inline-block px-5 py-3 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-lg bg-indigo-500 text-white capitalize tracking-wider font-semibold text-sm sm:text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 whitespace-nowrap
+    }
+}
+
+
+.marker {
+    position: absolute;
+    background-image: url('https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.hex__row {
+    margin-top: calc(((5rem * 0.288) * -1 + 0.25rem));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.hexagon {
+    position: relative;
+    width: 5rem;
+    height: 2.885rem;
+    background-color: cyan;
+    margin: 1.44rem 0.25rem 1.44rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+.hexagon:hover {
+    transform: scale(0.75);
+}
+.hexagon:before, .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 2.5rem solid transparent;
+    border-right: 2.5rem solid transparent;
+}
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 1.44rem solid cyan;
+}
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 1.44rem solid cyan;
+}
+.hex__plumbing{
+    background: #13b8ec;
+}
+.hex__plumbing::after{
+    border-top: 1.44rem solid #13b8ec;
+}
+.hex__plumbing::before{
+    border-bottom: 1.44rem solid #13b8ec;
+}
+
+.hex__painting {
+    background: #f06493;
+}
+
+.hex__painting::after{
+    border-top: 1.44rem solid #f06493;
+}
+.hex__painting::before{
+    border-bottom: 1.44rem solid #f06493;
+}
+
+.hex_assembly {
+    background: #8dc63f;
+}
+.hex_assembly::after{
+    border-top: 1.44rem solid #8dc63f;
+}
+.hex_assembly::before{
+    border-bottom: 1.44rem solid #8dc63f;
+}
+
+.hex_mover {
+    background: #9161a9;
+}
+.hex_mover::after{
+    border-top: 1.44rem solid #9161a9;
+}
+.hex_mover::before{
+    border-bottom: 1.44rem solid #9161a9;
+}
+
+.hex_general {
+    background: #fbb014;
+}
+.hex_general::after{
+    border-top: 1.44rem solid #fbb014;
+}
+.hex_general::before{
+    border-bottom: 1.44rem solid #fbb014;
+}
+
+.hex_electrical {
+    background: #05b5ab;
+    /*
+    transform: scale(1);
+    transition: all 0.25s ease-in-out;
+
+    */
+}
+.hex_electrical:hover {
+    /* transform: scale(1.5);  z-index: 99; */
+
+}
+.hex_electrical::after{
+    border-top: 1.44rem solid #05b5ab;
+}
+.hex_electrical::before{
+    border-bottom: 1.44rem solid #05b5ab;
+}
+
+.hex_logo {
+    background: #fff;
+}
+.hex_logo::after{
+    border-top: 1.44rem solid #fff;
+}
+.hex_logo::before{
+    border-bottom: 1.44rem solid #fff;
+}
